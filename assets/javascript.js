@@ -20,7 +20,7 @@ function genPassword(){
         
         if(newChar === 1){
             //for special characters generate a random number between 1 and 25
-            picker = numGen(1,25);
+            picker = numGen(0,24);
             //using the randomly generated number pick a character from the array
             newChar = specChars[picker];
             //add the character to the password variable
@@ -29,18 +29,18 @@ function genPassword(){
             i++;
         }else if(newChar === 2){
             //for letters generate a random number between 1 and 26
-            picker = numGen(1,26);
+            picker = numGen(0,25);
             newChar = caps[picker];
             password = password + newChar;
             i++;
         }else if(newChar === 3){
-            picker = numGen(1,26);
+            picker = numGen(0,25);
             newChar = lowerCase[picker];
             password = password + newChar;
             i++;
         }else{
             //for numbers generate a random number between 1 and 10
-            picker = numGen(1,10);
+            picker = numGen(0,9);
             newChar = numbers[picker];
             password = password + newChar;
             i++;
